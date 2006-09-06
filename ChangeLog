@@ -1,0 +1,7 @@
+
+* Wed Sep 06 00:01:21 2006, pabs <pabs@pablotron.org>
+  * initial import
+
+* Wed Sep 06 00:10:13 2006, pabs <pabs@pablotron.org>
+  * wirble.rb: remove symbol hackery to prevent
+    ri/rdoc from barfing

@@ -73,7 +73,7 @@ module Wirble
     end
 
     def cfg(key)
-      @opt[:"history_#{key}"]
+      @opt["history_#{key}".intern]
     end
 
     def save_history
