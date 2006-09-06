@@ -5,3 +5,7 @@
 * Wed Sep 06 00:10:13 2006, pabs <pabs@pablotron.org>
   * wirble.rb: remove symbol hackery to prevent
     ri/rdoc from barfing
+
+* Wed Sep  6 02:49:02 EDT 2006, Paul Duncan <pabs@pablotron.org>
+  * wirble.rb: fix typo
+  * re-release 0.1.0

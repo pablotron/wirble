@@ -93,7 +93,7 @@ module Wirble
       # expand history file and make sure it exists
       real_path = File.expand_path(cfg('path'))
       unless File.exist?(real_path)
-        say "History file #{path} doesn't exist."
+        say "History file #{real_path} doesn't exist."
         return
       end
 
