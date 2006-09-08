@@ -19,7 +19,7 @@ require 'ostruct'
 # hair out sifting through the code below.
 # 
 module Wirble
-  VERSION = '0.1.0'
+  VERSION = '0.1.1'
 
   #
   # Load internal Ruby features, including tab-completion, rubygems,
@@ -391,12 +391,17 @@ module Wirble
     # Colorize the results of inspect
     # 
     def self.colorize(str)
-      ret, nocol = '', Color.escape(:nothing)
-      Tokenizer.tokenize(str) do |tok, val|
-        # c = Color.escape(colors[tok])
-        ret << colorize_string(val, colors[tok])
+      begin
+        ret, nocol = '', Color.escape(:nothing)
+        Tokenizer.tokenize(str) do |tok, val|
+          # c = Color.escape(colors[tok])
+          ret << colorize_string(val, colors[tok])
+        end
+        ret
+      rescue
+        # catch any errors from the tokenizer (just in case)
+        str
       end
-      ret
     end
 
     #
