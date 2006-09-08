@@ -19,3 +19,8 @@
 * Fri Sep 08 13:11:05 2006, pabs <pabs@pablotron.org>
   * increment version to 0.1.2
   * wirble.gemspec: remove rubilicious dependency
+
+* Fri Sep  8 13:17:29 EDT 2006, Paul Duncan <pabs@pablotron.org>
+  * README: increment version to 0.1.2
+  * wirble.gemspec: ditto
+  * wirble.rb: ditto
