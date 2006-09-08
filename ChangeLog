@@ -24,3 +24,6 @@
   * README: increment version to 0.1.2
   * wirble.gemspec: ditto
   * wirble.rb: ditto
+
+* Fri Sep 08 13:18:15 2006, pabs <pabs@pablotron.org>
+  * releasing 0.1.2
