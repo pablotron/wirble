@@ -15,3 +15,7 @@
   * wirble.gemspec: ditto
   * wirble.rb: ditto
   * wirble.rb: wrap colorize in an exception (just in case)
+
+* Fri Sep 08 13:11:05 2006, pabs <pabs@pablotron.org>
+  * increment version to 0.1.2
+  * wirble.gemspec: remove rubilicious dependency

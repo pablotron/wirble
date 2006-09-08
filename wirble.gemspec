@@ -27,7 +27,7 @@ spec = Gem::Specification.new do |s|
   # s.extensions << "extconf.rb"
 
   #### Load-time details: library and application (you will need one or both).
-  s.autorequire = 'rubilicious'
+  s.autorequire = 'wirble'
   s.has_rdoc = true
   s.rdoc_options = ['--webcvs',
   'http://cvs.pablotron.org/cgi-bin/viewcvs.cgi/wirble/', '--title',
