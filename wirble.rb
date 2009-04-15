@@ -19,7 +19,7 @@ require 'ostruct'
 # hair out sifting through the code below.
 # 
 module Wirble
-  VERSION = '0.1.2'
+  VERSION = '0.1.3'
 
   #
   # Load internal Ruby features, including tab-completion, rubygems,
