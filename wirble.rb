@@ -33,7 +33,13 @@ module Wirble
     # load tab completion and rubygems
     #
     def self.init_libraries
-      LIBRARIES.each { |lib| require lib rescue nil }
+      LIBRARIES.each do |lib| 
+        begin
+          require lib 
+        rescue LoadError
+          nil
+        end
+      end
     end
 
     #
