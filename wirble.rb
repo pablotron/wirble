@@ -75,7 +75,7 @@ module Wirble
     private
 
     def say(*args)
-      puts *args if @verbose
+      puts(*args) if @verbose
     end
 
     def cfg(key)
@@ -144,21 +144,30 @@ module Wirble
           case state[-1]
           when nil
             case c
-            when ':': state << :symbol
-            when '"': state << :string
-            when '#': state << :object
+            when ':'
+              state << :symbol
+            when '"'
+              state << :string
+            when '#'
+              state << :object
             when /[a-z]/i
               state << :keyword
               repeat = true
             when /[0-9-]/
               state << :number
               repeat = true
-            when '{': yield :open_hash, '{'
-            when '[': yield :open_array, '['
-            when ']': yield :close_array, ']'
-            when '}': yield :close_hash, '}'
-            when /\s/: yield :whitespace, c
-            when ',': yield :comma, ','
+            when '{'
+              yield :open_hash, '{'
+            when '['
+              yield :open_array, '['
+            when ']'
+              yield :close_array, ']'
+            when '}'
+              yield :close_hash, '}'
+            when /\s/
+              yield :whitespace, c
+            when ','
+              yield :comma, ','
             when '>'
               yield :refers, '=>' if lc == '='
             when '.'
@@ -226,12 +235,12 @@ module Wirble
             end
           when :object
             case c
-            when '<': 
+            when '<' 
               yield :open_object, '#<'
               state << :object_class
-            when ':': 
+            when ':' 
               state << :object_addr
-            when '@': 
+            when '@' 
               state << :object_line
             when '>'
               yield :close_object, '>'
