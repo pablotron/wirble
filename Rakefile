@@ -79,7 +79,7 @@ gem_spec = Gem::Specification.new do |s|
   s.autorequire   = pkg.auto_require
 
   # dependencies
-  pkg.dependencies.each { |dep| s.add_dependency(dep) }
+  # pkg.dependencies.each { |dep| s.add_dependency(dep) }
 
   # rdoc info
   s.has_rdoc = true
