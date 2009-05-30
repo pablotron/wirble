@@ -22,15 +22,15 @@ module Wirble
   VERSION = '0.1.3'
 
   #
-  # Load internal Ruby features, including tab-completion, rubygems,
+  # Load internal Ruby features, including pp, tab-completion, 
   # and a simple prompt.
   #
   module Internals
     # list of internal libraries to automatically load
-    LIBRARIES = %w{pp irb/completion rubygems}
+    LIBRARIES = %w{pp irb/completion}
 
     #
-    # load tab completion and rubygems
+    # load libraries
     #
     def self.init_libraries
       LIBRARIES.each do |lib| 
